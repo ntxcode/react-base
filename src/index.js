@@ -4,5 +4,16 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootEl = document.getElementById('root')
+
+// regular imports
+ReactDOM.render(<App /> , rootEl)
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    ReactDOM.render(<App />, rootEl)
+  })
+}
+
 registerServiceWorker();
