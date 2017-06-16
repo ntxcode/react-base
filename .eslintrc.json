@@ -19,6 +19,13 @@
     "quotes": [2, "single"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
   "env": {
     "es6": true,
     "browser": true,

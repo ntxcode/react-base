@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import registerServiceWorker from 'utils/registerServiceWorker';
+import App from 'App';
+import 'assets/css/normalize.css';
 
 const rootEl = document.getElementById('root');
 

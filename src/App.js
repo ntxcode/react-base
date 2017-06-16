@@ -1,16 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+import PrivateRoute from 'modules/common/PrivateRoute';
+import HomePage from 'scenes/Home/HomePage';
+import LoginPage from 'scenes/Auth/Login/LoginPage';
+
+const history = createBrowserHistory();
 
 const App = () =>
-  <div className="App">
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
-    </div>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </div>;
+  <Router history={history}>
+    <Switch>
+      <PrivateRoute exact path="/" component={HomePage} />
+      <Route path="/login" component={LoginPage} />
+    </Switch>
+  </Router>;
 
 export default App;

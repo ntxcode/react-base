@@ -7,16 +7,19 @@
   "author": "ntxdev",
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_PATH=./src react-scripts start",
+    "build": "NODE_PATH=./src react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "format": "prettier --write --single-quote --parser=flow \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "history": "^4.6.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.0",
-    "react-dom": "^15.6.0"
+    "react-dom": "^15.6.0",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
