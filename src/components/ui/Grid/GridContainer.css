@@ -1,0 +1,19 @@
+.gridContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .gridContainer {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .gridContainer {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .gridContainer {
+    max-width: 1140px;
+  }
+}

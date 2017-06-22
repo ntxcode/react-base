@@ -1,0 +1,11 @@
+.AuthPage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  object-fit: contain;
+  width: 100%;
+}
+.AuthPageTitle {
+  margin-top: 20vh;
+}
