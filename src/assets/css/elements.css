@@ -1,0 +1,105 @@
+/*
+ * --------------- Elements ---------------
+ */
+html {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: decimal;
+}
+
+section {
+  outline-width: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+/*
+ * --------------- Typography ---------------
+ */
+body, button, input, select, textarea {
+  color: #4a4a4a;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*
+ * --------------- Headings ---------------
+ */
+h1 {
+  font-size: 2.0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+/*
+ * --------------- Links ---------------
+ */
+a {
+  color: #3D5AFE;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: #3F51B5;
+  text-decoration: underline;
+}
+a:hover, a:active {
+  outline: 0;
+}

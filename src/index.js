@@ -1,18 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import registerServiceWorker from 'utils/registerServiceWorker';
 import App from 'App';
 import 'assets/css/normalize.css';
+import 'assets/css/elements.css';
+import configureStore from './store';
 
 const rootEl = document.getElementById('root');
+const store = configureStore();
 
-// regular imports
-ReactDOM.render(<App />, rootEl);
+const renderApp = Component =>
+  render(
+    <Provider store={store}>
+      <Component />
+    </Provider>,
+    rootEl
+  );
 
-// Hot Module Replacement API
+renderApp(App);
+
 if (module.hot) {
   module.hot.accept('./App', () => {
-    ReactDOM.render(<App />, rootEl);
+    const NextApp = require('./App').default;
+    renderApp(NextApp);
   });
 }
 

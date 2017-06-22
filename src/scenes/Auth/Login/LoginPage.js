@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Auth from 'utils/Auth/Auth';
+import FormCard from 'components/ui/FormCard';
+import AuthPage from 'scenes/Auth/components/AuthPage';
+import LoginForm from './LoginForm';
 
-class Login extends Component {
+class LoginPage extends Component {
   state = {
     redirectToReferrer: false
+  };
+
+  submit = values => {
+    // print the form values to the console
+    console.log(values);
   };
 
   login = () => {
@@ -22,18 +30,19 @@ class Login extends Component {
       return <Redirect to={from} />;
     }
     return (
-      <div>
-        <h2>Login Page</h2>
-        <button onClick={this.login}>Log in</button>
-      </div>
+      <AuthPage title="Page Title">
+        <FormCard title="Login">
+          <LoginForm onSubmit={this.submit} />
+        </FormCard>
+      </AuthPage>
     );
   }
 }
 
-Login.propTypes = {
+LoginPage.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.object
   }).isRequired
 };
 
-export default Login;
+export default LoginPage;
